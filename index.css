@@ -1,0 +1,103 @@
+:root {
+  --chess-bg-color: #000;
+  --beige-bg-color: rgb(245, 245, 220);
+}
+
+body {
+  margin-top: 50px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(8, [col] 10vw);
+  grid-template-rows: repeat(8, [row] 10vw);
+  width: 80vw;
+  border: 5px solid #312727;
+  box-shadow: 0 25px 28px #777;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.grid b {
+  font-size: calc(5vw);
+  padding-top: 1vw;
+  text-align: center;
+}
+
+.grid b:nth-child(-n + 8):nth-child(even) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(-n + 7):nth-child(odd) {
+  background: var(--beige-bg-color);
+}
+
+.grid b:nth-child(n + 8):nth-child(-n + 16):nth-child(odd) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 10):nth-child(-n + 16):nth-child(even) {
+  background: var(--beige-bg-color);
+}
+
+.grid b:nth-child(n + 17):nth-child(-n + 24):nth-child(even) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 17):nth-child(-n + 24):nth-child(odd) {
+    background: var(--beige-bg-color);
+  }
+
+
+.grid b:nth-child(n + 25):nth-child(-n + 32):nth-child(odd) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 25):nth-child(-n + 32):nth-child(even) {
+    background: var(--beige-bg-color);
+  }
+
+.grid b:nth-child(n + 33):nth-child(-n + 40):nth-child(even) {
+  background: var(--chess-bg-color);
+}
+
+
+.grid b:nth-child(n + 33):nth-child(-n + 40):nth-child(odd) {
+    background: var(--beige-bg-color);
+  }
+
+
+
+
+
+
+
+
+
+
+
+.grid b:nth-child(n + 41):nth-child(-n + 48):nth-child(odd) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 49):nth-child(-n + 56):nth-child(even) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+  background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 57):nth-child(-n + 64):nth-child(even) {
+  background: var(--beige-bg-color);
+}
+
+@supports not ((background: var(--chess-bg-color)) or (display: grid)) {
+  .warning {
+    display: block !important;
+  }
+}
