@@ -14,9 +14,9 @@ body {
   grid-gap: 0;
   grid-template-columns: repeat(8, [col] 10vw);
   grid-template-rows: repeat(8, [row] 10vw);
-  width: 80vw;
-  border: 5px solid #312727;
-  box-shadow: 0 25px 28px #777;
+  max-width: 80vw;
+  border: 5px solid #966f33;
+  box-shadow: 0 15px 38px #3a3333;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
@@ -49,43 +49,39 @@ body {
 }
 
 .grid b:nth-child(n + 17):nth-child(-n + 24):nth-child(odd) {
-    background: var(--beige-bg-color);
-  }
-
+  background: var(--beige-bg-color);
+}
 
 .grid b:nth-child(n + 25):nth-child(-n + 32):nth-child(odd) {
   background: var(--chess-bg-color);
 }
 
 .grid b:nth-child(n + 25):nth-child(-n + 32):nth-child(even) {
-    background: var(--beige-bg-color);
-  }
+  background: var(--beige-bg-color);
+}
 
 .grid b:nth-child(n + 33):nth-child(-n + 40):nth-child(even) {
   background: var(--chess-bg-color);
 }
 
-
 .grid b:nth-child(n + 33):nth-child(-n + 40):nth-child(odd) {
-    background: var(--beige-bg-color);
-  }
-
-
-
-
-
-
-
-
-
-
+  background: var(--beige-bg-color);
+}
 
 .grid b:nth-child(n + 41):nth-child(-n + 48):nth-child(odd) {
   background: var(--chess-bg-color);
 }
 
+.grid b:nth-child(n + 41):nth-child(-n + 48):nth-child(even) {
+  background: var(--beige-bg-color);
+}
+
 .grid b:nth-child(n + 49):nth-child(-n + 56):nth-child(even) {
   background: var(--chess-bg-color);
+}
+
+.grid b:nth-child(n + 49):nth-child(-n + 56):nth-child(odd) {
+  background: var(--beige-bg-color);
 }
 
 .grid b:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
